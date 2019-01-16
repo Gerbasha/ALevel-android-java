@@ -12,5 +12,6 @@ public class Main {
         System.out.println("Result " + (d*e) + ";");
         System.out.println("\u0044");
         //!матиматические операции приводятся к int
+        //Some info
     }
 }
