@@ -11,6 +11,6 @@ public class Main {
         System.out.println(c + ";");
         System.out.println("Result " + (d*e) + ";");
         System.out.println("\u0044");
-        //матиматические операции приводятся к int
+        //!матиматические операции приводятся к int
     }
 }
