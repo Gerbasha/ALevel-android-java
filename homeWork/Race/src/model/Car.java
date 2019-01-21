@@ -3,19 +3,19 @@ package model;
 public class Car {
     private String name;
     private String brand;
-    private int fuelConsumption;
+    private double fuelConsumption;
     private int fuelVol;
-    private int dirtProtect;
-    private int pollutionRate;
+    private double dirtProtect;
+    private int dirtRate;
 
     /** Creating of Car instance. Dirt protection have to be in bounds from 0.1 to 0.9*/
-    public Car(String name, String brand, int fuelConsumption, int fuelVol, int dirtProtect, int pollutionRate) {
+    public Car(String name, String brand, double fuelConsumption, int fuelVol, double dirtProtect, int dirtRate) {
         this.name = name;
         this.brand = brand;
         this.fuelConsumption = fuelConsumption;
         this.fuelVol = fuelVol;
         this.dirtProtect = dirtProtect;
-        this.pollutionRate = pollutionRate;
+        this.dirtRate = dirtRate;
 
         if (dirtProtect == 0 || dirtProtect == 1){
             try {
@@ -43,11 +43,11 @@ public class Car {
         this.brand = brand;
     }
 
-    public int getFuelConsumption() {
+    public double getFuelConsumption() {
         return fuelConsumption;
     }
 
-    public void setFuelConsumption(int fuelConsumption) {
+    public void setFuelConsumption(double fuelConsumption) {
         this.fuelConsumption = fuelConsumption;
     }
 
@@ -59,7 +59,7 @@ public class Car {
         this.fuelVol = fuelVol;
     }
 
-    public int getDirtProtect() {
+    public double getDirtProtect() {
         return dirtProtect;
     }
 
@@ -67,11 +67,11 @@ public class Car {
         this.dirtProtect = dirtProtect;
     }
 
-    public int getPollutionRate() {
-        return pollutionRate;
+    public int getDirtRate() {
+        return dirtRate;
     }
 
-    public void setPollutionRate(int pollutionRate) {
-        this.pollutionRate = pollutionRate;
+    public void setDirtRate(int dirtRate) {
+        this.dirtRate = dirtRate;
     }
 }
