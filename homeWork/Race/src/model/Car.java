@@ -3,13 +3,15 @@ package model;
 public class Car {
     private String name;
     private String brand;
-    private double fuelConsumption;
+    private int fuelConsumption;
     private int fuelVol;
     private double dirtProtect;
-    private int dirtRate;
+    private double dirtRate;
+    private int circles;
+    private int stops;
 
     /** Creating of Car instance. Dirt protection have to be in bounds from 0.1 to 0.9*/
-    public Car(String name, String brand, double fuelConsumption, int fuelVol, double dirtProtect, int dirtRate) {
+    public Car(String name, String brand, int fuelConsumption, int fuelVol, double dirtProtect, int dirtRate) {
         this.name = name;
         this.brand = brand;
         this.fuelConsumption = fuelConsumption;
@@ -25,7 +27,6 @@ public class Car {
             }
         }
     }
-
 
     public String getName() {
         return name;
@@ -43,11 +44,11 @@ public class Car {
         this.brand = brand;
     }
 
-    public double getFuelConsumption() {
+    public int getFuelConsumption() {
         return fuelConsumption;
     }
 
-    public void setFuelConsumption(double fuelConsumption) {
+    public void setFuelConsumption(int fuelConsumption) {
         this.fuelConsumption = fuelConsumption;
     }
 
@@ -63,15 +64,31 @@ public class Car {
         return dirtProtect;
     }
 
-    public void setDirtProtect(int dirtProtect) {
+    public void setDirtProtect(double dirtProtect) {
         this.dirtProtect = dirtProtect;
     }
 
-    public int getDirtRate() {
+    public double getDirtRate() {
         return dirtRate;
     }
 
-    public void setDirtRate(int dirtRate) {
+    public void setDirtRate(double dirtRate) {
         this.dirtRate = dirtRate;
+    }
+
+    public int getCircles() {
+        return circles;
+    }
+
+    public void setCircles(int circles) {
+        this.circles = circles;
+    }
+
+    public int getStops() {
+        return stops;
+    }
+
+    public void setStops(int stops) {
+        this.stops = stops;
     }
 }

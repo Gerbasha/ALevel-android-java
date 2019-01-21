@@ -2,9 +2,9 @@ package model;
 
 public class Track {
     private int trackLength;
-    private int dirtRate;
+    private double dirtRate;
 
-    public Track(int trackLength, int dirtRate) {
+    public Track(int trackLength, double dirtRate) {
         this.trackLength = trackLength;
         this.dirtRate = dirtRate;
     }
@@ -17,11 +17,11 @@ public class Track {
         this.trackLength = trackLength;
     }
 
-    public int getDirtRate() {
+    public double getDirtRate() {
         return dirtRate;
     }
 
-    public void setDirtRate(int dirtRate) {
+    public void setDirtRate(double dirtRate) {
         this.dirtRate = dirtRate;
     }
 }
