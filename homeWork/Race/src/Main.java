@@ -41,11 +41,11 @@ public class Main {
         if (car.getStops() != 3){
             car.setFuelVol(car.getFuelVol() - car.getFuelConsumption());
             car.setDirtRate(track.getDirtRate() - (track.getDirtRate() * car.getDirtProtect()));
-            distance++;
+            car.setCarDistance(distance);
         }
-        if (distance % 4 > 0){
+        if (car.getCarDistance() % 4 > 0){
             car.setCircles(car.getCircles() + 1);
-            distance = 0;
+            car.setCarDistance(0);
         }
     }
 
