@@ -19,7 +19,7 @@ public class Car {
         this.dirtProtect = dirtProtect;
         this.dirtRate = dirtRate;
 
-        if (dirtProtect == 0 || dirtProtect == 1){
+        if (dirtProtect == 0 || dirtProtect == 1){// а если отрицатеьлное или больше 1 ? 
             try {
                 throw new IllegalArgumentException("Dirt protection is our of bound. Bounds: from 0.1 to 0.9");
             } catch (IllegalArgumentException e) {
