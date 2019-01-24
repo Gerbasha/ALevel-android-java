@@ -15,16 +15,6 @@ public class Dragon {
         this.defense = defense;
     }
 
-    public String binaryConverter(){
-        String x = "";
-        while (power > 0){
-            int a = power % 2;
-            x = a + x;
-            power = power / 2;
-        }
-        return x;
-    }
-
     public int getBonusPower() {
         return bonusPower;
     }
