@@ -2,32 +2,35 @@ package model;
 
 public class Dragon {
     private String name;
-    private int health;
-    private int attack;
-    private int defense;
+    private float health;
+    private float attack;
+    private double defense;
     private int power;
-    private int bonusPower;
+    private float bonusPower;
+    private float fullHP;
+    private float basicAttack;
 
-    public Dragon(String name, int health, int attack, int defense) {
+
+    public Dragon(String name, int health, float attack, double defense) {
         this.name = name;
         this.health = health;
         this.attack = attack;
         this.defense = defense;
     }
 
-    public int getBonusPower() {
+    public float getBonusPower() {
         return bonusPower;
     }
 
-    public void setBonusPower(int bonusPower) {
+    public void setBonusPower(float bonusPower) {
         this.bonusPower = bonusPower;
     }
 
-    public int getHealth() {
+    public float getHealth() {
         return health;
     }
 
-    public void setHealth(int health) {
+    public void setHealth(float health) {
         this.health = health;
     }
 
@@ -39,19 +42,19 @@ public class Dragon {
         this.name = name;
     }
 
-    public int getAttack() {
+    public float getAttack() {
         return attack;
     }
 
-    public void setAttack(int attack) {
+    public void setAttack(float attack) {
         this.attack = attack;
     }
 
-    public int getDefense() {
+    public double getDefense() {
         return defense;
     }
 
-    public void setDefense(int defense) {
+    public void setDefense(double defense) {
         this.defense = defense;
     }
 
@@ -61,5 +64,21 @@ public class Dragon {
 
     public void setPower(int power) {
         this.power = power;
+    }
+
+    public float getFullHP() {
+        return fullHP;
+    }
+
+    public void setFullHP(float fullHP) {
+        this.fullHP = fullHP;
+    }
+
+    public float getBasicAttack() {
+        return basicAttack;
+    }
+
+    public void setBasicAttack(float basicAttack) {
+        this.basicAttack = basicAttack;
     }
 }
