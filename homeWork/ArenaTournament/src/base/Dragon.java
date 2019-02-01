@@ -1,10 +1,10 @@
 package base;
 
-public class BaseDragon extends ArenaFighter {
+public class Dragon extends ArenaFighter implements ActionPreFight{
 
     Elements[] elements;
 
-    public BaseDragon(String name, int health, int attack, double defense, Elements[] elements) {
+    public Dragon(String name, int health, int attack, double defense, Elements[] elements) {
         super(name, health, attack, defense);
         this.elements = elements;
     }
@@ -27,7 +27,7 @@ public class BaseDragon extends ArenaFighter {
     }
 
     public int countAttack(ArenaFighter fighter) {
-        int bonusAttack = getPowerMultiplier(fighter instanceof BaseDragon ? ((BaseDragon) fighter).countByteMask() : 0);
+        int bonusAttack = getPowerMultiplier(fighter instanceof Dragon ? ((Dragon) fighter).countByteMask() : 0);
         return fighter.getAttack() * bonusAttack;
     }
 
@@ -35,5 +35,10 @@ public class BaseDragon extends ArenaFighter {
     public void attackArenaFighter(ArenaFighter fighter) {
         int attack = countAttack(fighter);
         fighter.takeDamage(attack);
+    }
+
+    @Override
+    public void goActionPreFight() {
+
     }
 }
