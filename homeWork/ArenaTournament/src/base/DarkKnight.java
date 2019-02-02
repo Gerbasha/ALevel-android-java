@@ -8,12 +8,12 @@ public class DarkKnight extends Knight {
         super(name, health, attack, defense, shield);
     }
 
-    private void heal(){
-        setHealth(getHealth() - halfDamage);
+    private void heal() {
+        setHealth(getHealth() + halfDamage);
 
     }
 
-    public int getHalfDamage(ArenaFighter fighter){
-        return halfDamage = fighter.attack / 2;
+    public void getHalfDamage(ArenaFighter fighter) {
+        halfDamage = fighter.attack / 2;
     }
 }

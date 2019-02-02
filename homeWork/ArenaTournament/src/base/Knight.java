@@ -2,7 +2,7 @@ package base;
 
 import java.util.Random;
 
-public class Knight extends ArenaFighter {
+public class Knight extends ArenaFighter implements ActionFight{
 
     private float shield;
     private Random random;
@@ -15,7 +15,20 @@ public class Knight extends ArenaFighter {
 
     @Override
     public void takeDamage(int damage) {
-        if (random.nextGaussian() > shield)
-        super.takeDamage(damage);
+        double r = random.nextGaussian();
+        if ( r > shield){
+            super.takeDamage(damage);
+        }
+
+    }
+
+    @Override
+    public void doActionFight() {
+
+    }
+
+    @Override
+    public void doActionFight(ArenaFighter fighter) {
+        attackArenaFighter(fighter);
     }
 }

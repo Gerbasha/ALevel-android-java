@@ -1,7 +1,8 @@
 package base;
 
 public interface ActionPreFight {
-    void goActionPreFight();
+    void doActionPreFight();
+    void doActionPreFight(ArenaFighter fighter);
 
 
 }

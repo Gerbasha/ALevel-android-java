@@ -26,19 +26,33 @@ public class Dragon extends ArenaFighter implements ActionPreFight{
         return count;
     }
 
-    public int countAttack(ArenaFighter fighter) {
+    public void countAttack(ArenaFighter fighter) {
         int bonusAttack = getPowerMultiplier(fighter instanceof Dragon ? ((Dragon) fighter).countByteMask() : 0);
-        return fighter.getAttack() * bonusAttack;
+        setAttack(getAttack() * bonusAttack);
     }
 
     @Override
     public void attackArenaFighter(ArenaFighter fighter) {
-        int attack = countAttack(fighter);
         fighter.takeDamage(attack);
     }
 
     @Override
-    public void goActionPreFight() {
+    public void doActionPreFight() {
 
+    }
+
+    @Override
+    public void doActionPreFight(ArenaFighter fighter) {
+        countAttack(fighter);
+    }
+
+    @Override
+    public void doActionFight() {
+
+    }
+
+    @Override
+    public void doActionFight(ArenaFighter fighter) {
+        attackArenaFighter(fighter);
     }
 }

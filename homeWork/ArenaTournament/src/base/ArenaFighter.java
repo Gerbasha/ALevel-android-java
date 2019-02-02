@@ -1,6 +1,6 @@
 package base;
 
-abstract class ArenaFighter {
+public abstract class ArenaFighter implements ActionFight{
     String name;
     int health;
     int attack;
@@ -14,6 +14,8 @@ abstract class ArenaFighter {
         this.defense = defense;
         this.fullHP = health;
     }
+
+
 
     public void attackArenaFighter(ArenaFighter fighter){
         fighter.takeDamage(attack);

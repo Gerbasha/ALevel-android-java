@@ -8,8 +8,8 @@ public class DragonRider extends ArenaFighter implements ActionPreFight {
         super(name, health, attack, defense);
     }
 
-    public void countHealth(){
-          setHealth(getHealth() + petDragon.getHealth());
+    public void countHealth() {
+        setHealth(getHealth() + petDragon.getHealth());
     }
 
     public void countAttack() {
@@ -23,14 +23,24 @@ public class DragonRider extends ArenaFighter implements ActionPreFight {
     }
 
     @Override
-    public void attackArenaFighter(ArenaFighter fighter) {
-        if (fighter instanceof Dragon){
+    public void doActionPreFight() {
+
+    }
+
+    @Override
+    public void doActionPreFight(ArenaFighter fighter) {
+        if (fighter instanceof Dragon) {
             petDragon = (Dragon) fighter;
         }
     }
 
     @Override
-    public void goActionPreFight() {
+    public void doActionFight() {
+
+    }
+
+    @Override
+    public void doActionFight(ArenaFighter fight) {
 
     }
 }
