@@ -1,5 +1,8 @@
-package model;
+package ruslan.homework.com.arena;
 
+
+import ruslan.homework.com.fighters.Dragon;
+import ruslan.homework.com.fighters.FightersCreator;
 
 public class UnrealTournament {
     Arena arena = new Arena();
@@ -10,7 +13,7 @@ public class UnrealTournament {
 
     public Dragon[] firstTour(){
         System.out.println("We start a first tour.");
-        DragonCreator dragonCreator = new DragonCreator();
+        FightersCreator dragonCreator = new FightersCreator();
         Dragon[] dragonsFstTour = dragonCreator.createDragons();
         Dragon[] dragonsScndTour = new Dragon[dragonsFstTour.length / 2];
         int j = 0;
