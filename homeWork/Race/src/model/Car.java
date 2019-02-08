@@ -1,14 +1,25 @@
 package model;
 
+// Аналогично с классом трассы, создаем класс автомобиля.
+
 public class Car {
+
+    // Создаем переменные которые нам понядобятся в дальнейшем.
+    // Имя, марка, расход топлива, объём бака, отталкивание грязи и уровень заглязненности.
+
     private String name;
     private String brand;
     private int fuelConsumption;
     private int fuelVol;
     private double dirtProtect;
     private double dirtRate;
+
+    // Эти параметры мы не передаём в кончтруктор, но будем их использовать в классе Main.
+    // На данном этапе мы их просто создали и знаем что такие есть.
+
     private int circles;
     private int stops;
+    private int carDistance;
 
     /** Creating of Car instance. Dirt protection have to be in bounds from 0.1 to 0.9*/
     public Car(String name, String brand, int fuelConsumption, int fuelVol, double dirtProtect, int dirtRate) {
@@ -19,7 +30,10 @@ public class Car {
         this.dirtProtect = dirtProtect;
         this.dirtRate = dirtRate;
 
-        if (dirtProtect == 0 || dirtProtect == 1){// а если отрицатеьлное или больше 1 ? 
+        // Этот цикл if будет возвращать в консоль ошибку, если заданный нами в конструкторе коэф. отталкивания грязт
+        // будет равено 0 или 1 (нельзя по условию)
+
+        if (dirtProtect == 0 || dirtProtect == 1){
             try {
                 throw new IllegalArgumentException("Dirt protection is our of bound. Bounds: from 0.1 to 0.9");
             } catch (IllegalArgumentException e) {
@@ -90,5 +104,13 @@ public class Car {
 
     public void setStops(int stops) {
         this.stops = stops;
+    }
+
+    public int getCarDistance() {
+        return carDistance;
+    }
+
+    public void setCarDistance(int carDistance) {
+        this.carDistance = carDistance;
     }
 }
